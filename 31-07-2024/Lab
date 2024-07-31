@@ -1,0 +1,233 @@
+Shopping Cart Problem
+------------------------------
+
+//Initialize variables
+
+
+double totalCost=0
+int cart=0
+int discountLimit=100
+double discountRate=0.1
+
+I
+	for each item in cart                       // check item in cart
+		cart = cart + item.price                  // add item and price
+	if cart > discountLimit
+		discountAmount = cart * discountRate      //apply discount
+		cart = cart - discountRate
+		
+return cart
+
+
+---------------------or----------------------------------------------
+
+
+BEGIN
+    DECLARE items AS ARRAY OF FLOAT
+    DECLARE total AS FLOAT
+    DECLARE discount AS FLOAT
+    DECLARE finalTotal AS FLOAT
+    DECLARE threshold AS FLOAT
+    DECLARE discountRate AS FLOAT
+ 
+    SET items = [item1, item2, item3, ..., itemN]  // Assume item1, item2, etc., are the prices of the items
+    SET total = 0.0
+    SET threshold = 100.0  // Example threshold amount for discount
+    SET discountRate = 0.10  // Example discount rate of 10%
+ 
+    FOR EACH item IN items
+        total = total + item
+    END FOR
+ 
+    IF total > threshold THEN
+        discount = total * discountRate
+    ELSE
+        discount = 0
+    END IF
+ 
+    finalTotal = total - discount
+ 
+    PRINT "Total before discount: ", total
+    PRINT "Discount applied: ", discount
+    PRINT "Total after discount: ", finalTotal
+END
+
+
+
+Simple Calculator
+------------------------------------------------------------------
+
+Input double num1
+Input double num2
+Input char Op
+
+if Op == '+'
+	 result = num1 + num2
+elif Op == '-'
+	 result = num1 - num2
+elif Op == '*'
+	 result = num1 * num2
+elif Op == '/'
+	if num2 !=0 :
+	 result = num1 / num2
+	else :
+		print ("error division")
+else :
+	Invalid operation
+
+return result
+
+
+
+
+BEGIN
+    DECLARE num1, num2, result AS FLOAT
+    DECLARE operator AS CHAR
+ 
+    // Input numbers and operator
+    PRINT "Enter first number: "
+    INPUT num1
+ 
+    PRINT "Enter operator (+, -, *, /): "
+    INPUT operator
+ 
+    PRINT "Enter second number: "
+    INPUT num2
+ 
+    // Perform calculation based on operator
+    IF operator == '+' THEN
+        result = num1 + num2
+    ELSE IF operator == '-' THEN
+        result = num1 - num2
+    ELSE IF operator == '*' THEN
+        result = num1 * num2
+    ELSE IF operator == '/' THEN
+        IF num2 != 0 THEN
+            result = num1 / num2
+        ELSE
+            PRINT "Error: Division by zero"
+            EXIT
+        END IF
+    ELSE
+        PRINT "Error: Invalid operator"
+        EXIT
+    END IF
+ 
+    // Output result
+    PRINT "The result is: ", result
+END
+
+
+
+FizzBuzz
+Write pseudocode for the FizzBuzz problem: For numbers 1 to 100, print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both.
+-----------------------------------------------------------------------------------------
+
+
+Input num
+
+
+for i in range(1, 101)
+
+	if i % 3 == 0 and i % 5 == 0:
+		print "FizzBuzz"
+	elif i % 3 == 0:
+		print "Fizz"
+	elif i % 5 == 0:
+		print "Buzz"
+	else:
+		print(i)
+  end if
+
+end for
+
+
+
+
+
+Palindrome
+Write pseudocode to check if a given string is a palindrome.
+-----------------------------------------------------------------------------------
+
+Input string
+modifiedString = string.replace(" ", " ").lower()
+if modifiedString == modifiedString[::-1]
+	print "Palindrome"
+else
+	print "Not Palindrome"
+
+
+
+
+Find Maximum Value
+Write pseudocode to find the maximum value in an array of integers.
+-------------------------------------------------------------------------------------
+
+int [] array = [2,4,5,7,1]
+int max = array[0]
+for num in array[1:]:
+	if num > max:
+		max = num
+print(max)
+
+
+
+Sum of first 10 even number
+----------------------------------------------
+
+BEGIN
+	DECLARE num AS INT
+	DECLARE sum AS INT
+	
+	
+	SET sum = 0
+	
+	
+	FOR i IN range(1,11):
+		IF i % 2 == 0:
+			PRINT(i)
+			sum += i
+		PRINT(sum)
+		
+		END IF
+	END FOR
+END
+
+
+
+
+Bank Account Management
+Write pseudocode to manage a simple bank account that allows deposits, withdrawals, and checking the balance.
+----------------------------------------------------------------------------------------------
+
+
+
+
+function TestBankAccount()
+	balance=0
+	print "1.deposit"
+	print "2.withdraw"
+	print "3.check balance"
+	print "4.exit"
+        input choice
+	switch choice
+	case 1.
+	print "enter amount"
+	if amount<decimal> > 0 
+                balance = balance + amount
+                print "Deposit successful " + balance
+	 else
+                print "Invalid deposit amount."
+	case 2.
+	print "enter amount"
+	 if amount<decimal> > 0 
+                if amount<decimal> <= balance 
+                    balance = balance - amount
+                    print "Withdrawal successful"
+                else
+                    print "Insufficient balance."
+            else
+                print "Invalid withdrawal amount."
+	case 3.
+		 print "Current balance: " + balance
+	call TestBankAccount()
