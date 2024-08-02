@@ -1,0 +1,160 @@
+P4. print series 0, 1, 1, 2, 3, 5, 8, 13, ... N terms 
+    Q10: use for loop
+    Q11: use while loop
+    Q12: use do..while loop
+
+
+-----------------ps---------------
+
+for loop
+----------
+
+
+function PrintSeries0_1_1_2_3_5(N)
+    int prev = 0, next = 1
+            for (int I = 1; I <= N; I++) 
+                print prev + " "
+                sum = prev + next;
+                prev = next
+                next = sum
+            end for
+function TestPrintSeries0_1_1_2_3_()
+    Input N
+    PrintSeries0_1_1_2_3_(N)
+
+
+
+
+
+using System;
+
+namespace Q1
+{
+    internal class Program
+    {
+
+        static void PrintSeries0_1_1_2_3_5(int N)
+        {
+            int prev = 0, next = 1;
+            for (int I = 1; I <= N; I++) {
+                Console.Write($"{prev} ");
+                int sum = prev + next;
+                prev = next;
+                next = sum;
+            }
+
+        }
+        static void TestPrintSeries0_1_1_2_3_() {
+            Console.Write("Enter number of terms:");
+            int N = int.Parse(Console.ReadLine());
+            Console.Write("Series: ");
+            PrintSeries0_1_1_2_3_5(N);
+            Console.WriteLine();
+        }
+    static void Main(string[] args)
+        {
+            Console.WriteLine("--------------TestPrintSeries0_1_1_2_3_...--------------");
+            TestPrintSeries0_1_1_2_3_();
+            Console.WriteLine("--------------End TestPrintSeries0_1_1_2_3_...--------------");
+            
+            Console.ReadKey();
+
+
+        }
+
+    }
+}    
+
+
+------------------------------------------
+while
+-------
+
+-----ps-------------
+
+function PrintSeries0_1_1_2_3_5(N)
+    int prev = 0, next = 1
+            I = 1
+            while I <= N
+                print prev + " "
+                sum = prev + next;
+                prev = next
+                next = sum
+                I++
+            end while
+function TestPrintSeries0_1_1_2_3_()
+    Input N
+    PrintSeries0_1_1_2_3_(N)
+
+
+
+
+
+---------c#-------------------
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q2
+{
+    internal class Program
+    {
+        static void PrintSeries0_1_1_2_3_5(int N)
+        {
+            int prev = 0, next = 1;
+            int I = 1;
+            while ( I <= N )
+            {
+                Console.Write($"{prev} ");
+                int sum = prev + next;
+                prev = next;
+                next = sum;
+                I++;
+            }
+
+        }
+        static void TestPrintSeries0_1_1_2_3_()
+        {
+            Console.Write("Enter number of terms:");
+            int N = int.Parse(Console.ReadLine());
+            Console.Write("Series: ");
+            PrintSeries0_1_1_2_3_5(N);
+            Console.WriteLine();
+        }
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("--------------TestPrintSeries0_1_1_2_3_...--------------");
+            TestPrintSeries0_1_1_2_3_();
+            Console.WriteLine("--------------End TestPrintSeries0_1_1_2_3_...--------------");
+
+            Console.ReadKey();
+        }
+    }
+}
+
+----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
